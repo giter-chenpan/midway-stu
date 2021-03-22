@@ -11,22 +11,24 @@ export default (appInfo: EggAppInfo) => {
   // add your config here
   config.middleware = [];
   config.orm = {
-    type: 'mysql',
-    host: '120.79.102.235',
-    port: 3306,
-    username: 'root',
-    password: 'kh:ql737usnP',
-    database: 'test',
-    synchronize: false,
-    logging: false,
- }
-  
+    default: {
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'kh:ql737usnP',
+      database: 'test',
+      entities: [__dirname + '/entity/*.ts'],
+      synchronize: true,
+      logging: false,
+    },
+  };
+
   config.midwayFeature = {
     // true 代表使用 midway logger
     // false 或者为空代表使用 egg-logger
-    replaceEggLogger: true
-  }
-
+    replaceEggLogger: true,
+  };
 
   return config;
 };
