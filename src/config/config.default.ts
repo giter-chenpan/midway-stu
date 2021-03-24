@@ -1,7 +1,7 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
+import { join } from 'path';
 
 export type DefaultConfig = PowerPartial<EggAppConfig>;
-
 export default (appInfo: EggAppInfo) => {
   const config = {} as DefaultConfig;
 
@@ -23,12 +23,20 @@ export default (appInfo: EggAppInfo) => {
       logging: false,
     },
   };
+  config.grpc = {
+    services: [
+      {
+        url: 'localhost:6565',
+        protoPath: join(__dirname, '../../proto/helloworld.proto'),
+        package: 'helloworld',
+      },
+    ],
+  };
 
   config.midwayFeature = {
     // true 代表使用 midway logger
     // false 或者为空代表使用 egg-logger
     replaceEggLogger: true,
   };
-
   return config;
 };

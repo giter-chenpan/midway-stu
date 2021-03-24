@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-extraneous-import
 import { Column, PrimaryGeneratedColumn, OneToOne, JoinColumn } from 'typeorm';
 import { EntityModel } from '@midwayjs/orm';
 import { Photo } from './photo';

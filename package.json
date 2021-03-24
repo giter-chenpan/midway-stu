@@ -4,19 +4,22 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "@midwayjs/decorator": "^2.3.0",
+    "@grpc/grpc-js": "^1.2.12",
+    "@midwayjs/decorator": "^2.9.0",
+    "@midwayjs/grpc": "^2.9.0",
     "@midwayjs/orm": "^1.3.0",
     "@midwayjs/swagger": "^1.0.6",
     "@midwayjs/web": "^2.3.0",
     "egg": "^2.0.0",
-    "egg-mysql": "^3.0.0",
     "egg-scripts": "^2.10.0",
     "mysql2": "^2.2.5",
-    "swagger-ui-dist": "^3.45.1"
+    "swagger-ui-dist": "^3.45.1",
+    "typeorm": "^0.2.31"
   },
   "devDependencies": {
     "@midwayjs/cli": "^1.0.0",
     "@midwayjs/egg-ts-helper": "^1.0.1",
+    "@midwayjs/grpc-helper": "^1.0.5",
     "@midwayjs/luckyeye": "^1.0.0",
     "@midwayjs/mock": "^2.3.0",
     "@types/jest": "^26.0.10",

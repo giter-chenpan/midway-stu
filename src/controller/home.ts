@@ -20,7 +20,7 @@ export class HomeController {
     .build())
   @Get('/index')
   @HttpCode(201)
-  async home(@Query('id') uid: string = '0') {
+  async home(@Query('id') uid = '0') {
     const aa = await this.indexs.getu(uid);
     return `Hello ${aa}`;
   }
